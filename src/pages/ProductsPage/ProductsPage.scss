@@ -1,5 +1,5 @@
-@import '../../styles/utils/vars';
-@import '../../styles/utils/mixins';
+@use '../../styles/utils/vars' as v;
+@use '../../styles/utils/mixins' as m;
 
 .products-page {
   max-width: 1136px;
@@ -7,7 +7,7 @@
   margin-inline: auto;
   margin-bottom: 64px;
 
-  @include on-desktop {
+  @include m.on-desktop {
     margin-bottom: 80px;
   }
 
@@ -15,7 +15,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-bottom: 40px;
     }
   }
@@ -23,9 +23,9 @@
   &__total {
     margin-top: 8px;
     margin-bottom: 32px;
-    color: $color_secondary;
+    color: v.$color_secondary;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-bottom: 40px;
     }
   }
@@ -38,11 +38,11 @@
     margin-top: 24px;
     margin-bottom: 64px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-top: 40px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       margin-bottom: 80px;
     }
   }
@@ -53,7 +53,7 @@
   justify-content: space-between;
   gap: 16px;
 
-  @include on-tablet {
+  @include m.on-tablet {
     justify-content: flex-start;
   }
 
@@ -63,24 +63,24 @@
     flex: 1;
 
     &:first-child {
-      @include on-tablet {
+      @include m.on-tablet {
         max-width: 187px;
         width: 100%;
       }
 
-      @include on-desktop {
+      @include m.on-desktop {
         max-width: 176px;
         width: 100%;
       }
     }
 
     &:last-child {
-      @include on-tablet {
+      @include m.on-tablet {
         max-width: 136px;
         width: 100%;
       }
 
-      @include on-desktop {
+      @include m.on-desktop {
         max-width: 128px;
         width: 100%;
       }
@@ -88,20 +88,20 @@
   }
 
   &__type {
-    color: $color_secondary;
+    color: v.$color_secondary;
     margin-bottom: 4px;
   }
 
   &__select {
     height: 40px;
-    border: 1px solid $color_icons_placeholder;
+    border: 1px solid v.$color_icons_placeholder;
     border-radius: 8px;
     padding: 10px 12px 9px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    @include hover(border-color, $color_secondary);
+    @include m.hover(border-color, v.$color_secondary);
   }
 
   &__option {

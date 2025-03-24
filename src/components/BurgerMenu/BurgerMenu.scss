@@ -1,4 +1,4 @@
-@import '../../styles/utils/vars';
+@use '../../styles/utils/vars' as v;
 
 .burger-menu {
   position: relative;
@@ -11,7 +11,7 @@
     left: 0;
     height: 1.5px;
     width: 100%;
-    background-color: $color_primary;
+    background-color: v.$color_primary;
     transition: all 0.3s ease;
 
     &--1 {

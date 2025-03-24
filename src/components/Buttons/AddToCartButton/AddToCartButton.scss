@@ -1,5 +1,5 @@
-@import '../../../styles/utils/mixins';
-@import '../../../styles/utils/vars';
+@use '../../../styles/utils/mixins' as m;
+@use '../../../styles/utils/vars' as v;
 
 .add-to-cart-button {
   width: 100%;
@@ -8,18 +8,18 @@
   background-color: #216cff;
   color: #fff;
 
-  @include hover('box-shadow', 0 3px 13px 0 rgba(23, 32, 49, 0.4));
+  @include m.hover('box-shadow', 0 3px 13px 0 rgba(23, 32, 49, 0.4));
 
-  @include on-tablet {
+  @include m.on-tablet {
     width: 125px;
     height: 40px;
   }
 
   &.button--selected {
-    border: 1px solid $color_elements;
+    border: 1px solid v.$color_elements;
     background-color: white;
-    color: $color_accent_primary;
+    color: v.$color_accent_primary;
 
-    @include hover('box-shadow', 0 1px 9px 0 $color_hover);
+    @include m.hover('box-shadow', 0 1px 9px 0 v.$color_hover);
   }
 }

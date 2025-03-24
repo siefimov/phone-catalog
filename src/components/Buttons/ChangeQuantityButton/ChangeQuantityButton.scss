@@ -1,13 +1,13 @@
-@import '../../../styles/utils/vars';
+@use '../../../styles/utils/vars' as v;
 
 .change-quantity {
   width: 32px;
   height: 32px;
-  border: 1px solid $color_icons_placeholder;
+  border: 1px solid v.$color_icons_placeholder;
   flex-shrink: 0;
 
   &:disabled {
     cursor: not-allowed;
-    border: 1px solid $color_elements;
+    border: 1px solid v.$color_elements;
   }
 }

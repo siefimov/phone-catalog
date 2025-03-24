@@ -1,5 +1,5 @@
-@import '../../../../styles/utils/vars';
-@import '../../../../styles/utils/mixins';
+@use '../../../../styles/utils/vars' as v;
+@use '../../../../styles/utils/mixins' as m;
 
 .by-category {
   &__title {
@@ -10,13 +10,13 @@
     flex-direction: column;
     gap: 32px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       flex-direction: row;
       width: calc(100vw - 48px);
       gap: 16px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       width: 100%;
     }
   }
@@ -31,7 +31,7 @@
   &__image-wrapper {
     margin-bottom: 24px;
 
-    @include hover(transform, scale(1.02));
+    @include m.hover(transform, scale(1.02));
 
     & img {
       width: 100%;
@@ -44,13 +44,13 @@
   &__item-title {
     font-weight: 600;
     font-size: 20px;
-    color: $color_primary;
+    color: v.$color_primary;
     margin-bottom: 4px;
 
-    @include hover(color, $color_accent_secondary);
+    @include m.hover(color, v.$color_accent_secondary);
   }
 
   &__count {
-    color: $color_secondary;
+    color: v.$color_secondary;
   }
 }

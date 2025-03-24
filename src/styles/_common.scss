@@ -1,6 +1,9 @@
+@use './utils/vars' as v;
+@use './utils/mixins' as m;
+
 html {
-  font-family: $font-family-base;
-  color: $color_primary;
+  font-family: v.$font-family-base;
+  color: v.$color_primary;
   overflow: auto;
   height: 100%;
   margin: 0;
@@ -14,14 +17,14 @@ body {
 }
 
 [class*='__container'] {
-  @include content-padding-inline;
+  @include m.content-padding-inline;
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: $color-primary;
+  color: v.$color-primary;
 }
 
 .main {
@@ -32,8 +35,8 @@ body {
   justify-content: center;
   row-gap: 110px;
   overflow-x: hidden;
-  background-color: $color_hover;
-  border-bottom: 1px solid $color-elements;
+  background-color: v.$color_hover;
+  border-bottom: 1px solid v.$color-elements;
 }
 
 .visually-hidden {

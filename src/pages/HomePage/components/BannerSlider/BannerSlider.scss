@@ -1,5 +1,5 @@
-@import '../../../../styles/utils/mixins';
-@import '../../../../styles/utils/vars';
+@use '../../../../styles/utils/mixins' as m;
+@use '../../../../styles/utils/vars' as v;
 
 .banner-slider {
   position: relative;
@@ -8,7 +8,7 @@
   margin-left: -16px;
   margin-right: -16px;
 
-  @include on-tablet {
+  @include m.on-tablet {
     display: flex;
     align-items: stretch;
     gap: 16px;
@@ -19,11 +19,11 @@
     margin-right: 0;
   }
 
-  @include on-tablet {
+  @include m.on-tablet {
     width: calc(100vw - 48px);
   }
 
-  @include on-desktop {
+  @include m.on-desktop {
     width: calc(1200px - 64px);
   }
 
@@ -54,13 +54,13 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include on-tablet {
+    @include m.on-tablet {
       padding: 8px;
       border-radius: 5px;
       max-height: 400px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       padding: 15px;
     }
 
@@ -73,13 +73,13 @@
 
       margin-bottom: 40px;
 
-      @include on-tablet {
+      @include m.on-tablet {
         font-size: 25px;
         margin-bottom: 0;
         text-align: left;
       }
 
-      @include on-desktop {
+      @include m.on-desktop {
         font-size: 50px;
       }
     }
@@ -90,7 +90,7 @@
       color: #fff;
       margin-bottom: 37px;
 
-      @include on-tablet {
+      @include m.on-tablet {
         font-size: 26px;
         margin-bottom: 15px;
       }
@@ -121,22 +121,22 @@
   &__control {
     width: 14px;
     height: 4px;
-    background-color: $color_elements;
+    background-color: v.$color_elements;
     border-radius: 2px;
     transition: opacity 0.3s ease;
     cursor: pointer;
 
-    @include hover(background-color, $color_secondary);
+    @include m.hover(background-color, v.$color_secondary);
 
     &.active {
-      background-color: $color_primary;
+      background-color: v.$color_primary;
     }
   }
 
   &__button {
     width: 32px;
     background-color: #fff;
-    border: 1px solid $color_icons_placeholder;
+    border: 1px solid v.$color_icons_placeholder;
     border-radius: 48px;
     justify-content: center;
     align-items: center;
@@ -145,7 +145,7 @@
 
     display: none;
 
-    @include on-tablet {
+    @include m.on-tablet {
       display: flex;
     }
 
@@ -155,7 +155,7 @@
     }
 
     &:hover:not(:disabled) {
-      border-color: $color_primary;
+      border-color: v.$color_primary;
     }
   }
 
@@ -175,11 +175,11 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @include on-tablet {
+    @include m.on-tablet {
       padding: 22px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       padding: 40px;
       border-radius: 20px;
     }
@@ -188,7 +188,7 @@
   &__slide-image-wrapper {
     flex-basis: 55%;
 
-    @include on-tablet {
+    @include m.on-tablet {
       padding-top: 20px;
 
       display: flex;
@@ -217,7 +217,7 @@
     width: 18px;
     margin: 10px;
 
-    @include on-desktop {
+    @include m.on-desktop {
       margin-left: 10px;
       height: 20px;
       width: auto;
@@ -238,12 +238,12 @@
       border-color: attr(data-border-color);
     }
 
-    @include on-tablet {
+    @include m.on-tablet {
       font-size: 14px;
       padding: 10px 30px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       font-size: 14px;
       padding: 15px 55px;
     }

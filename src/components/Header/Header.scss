@@ -1,5 +1,5 @@
-@import '../../styles/utils/vars';
-@import '../../styles/utils/mixins';
+@use '../../styles/utils/vars' as v;
+@use '../../styles/utils/mixins' as m;
 
 .header {
   position: sticky;
@@ -27,11 +27,11 @@
     height: 48px;
     margin-right: -16px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-right: -24px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       margin-right: -32px;
     }
   }
@@ -48,11 +48,11 @@
     align-items: center;
     width: 48px;
     height: 100%;
-    border-left: 1px solid $color_elements;
+    border-left: 1px solid v.$color_elements;
 
     &--is-active {
-      color: $color_primary;
-      border-bottom: 3px solid $color_primary;
+      color: v.$color_primary;
+      border-bottom: 3px solid v.$color_primary;
     }
   }
 }
@@ -79,14 +79,14 @@
   &__link.typography__uppercase {
     line-height: 27px;
     margin-bottom: 16px;
-    color: $color_secondary;
+    color: v.$color_secondary;
 
-    @include hover(color, $color_primary);
+    @include m.hover(color, v.$color_primary);
   }
 
   &__link--is-active {
-    color: $color_primary;
-    border-bottom: 3px solid $color_primary;
+    color: v.$color_primary;
+    border-bottom: 3px solid v.$color_primary;
   }
 
   &.nav--open {
@@ -175,7 +175,7 @@
   justify-content: space-around;
   align-items: center;
   height: 64px;
-  border-top: 1px solid $color_elements;
+  border-top: 1px solid v.$color_elements;
   z-index: 20;
 
   &__wrapper {
@@ -186,12 +186,12 @@
     height: 100%;
 
     &:first-child {
-      border-right: 1px solid $color_elements;
+      border-right: 1px solid v.$color_elements;
     }
 
     &--is-active {
-      color: $color_primary;
-      border-bottom: 3px solid $color_primary;
+      color: v.$color_primary;
+      border-bottom: 3px solid v.$color_primary;
     }
   }
 }

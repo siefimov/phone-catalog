@@ -1,4 +1,5 @@
-@import '../../styles/utils/mixins';
+@use '../../styles/utils/mixins' as m;
+@use '../../styles/utils/vars' as v;
 
 .modal {
   position: fixed;
@@ -46,7 +47,7 @@
     transform: translateY(-20px);
     transition: transform 0.3s ease;
 
-    @include on-tablet {
+    @include m.on-tablet {
       max-width: 500px;
     }
   }
@@ -62,10 +63,10 @@
     background: none;
     border: none;
     font-size: 14px;
-    color: $color_icons_placeholder;
+    color: v.$color_icons_placeholder;
     cursor: pointer;
 
-    @include hover(color, $color_primary);
+    @include m.hover(color, v.$color_primary);
   }
 
   &__info {
@@ -88,15 +89,15 @@
   }
 
   &__button--confirm {
-    background-color: $color_accent_primary;
+    background-color: v.$color_accent_primary;
     color: #fff;
 
-    @include hover(box-shadow, 0 3px 13px 0 rgba(23, 32, 49, 0.4));
+    @include m.hover(box-shadow, 0 3px 13px 0 rgba(23, 32, 49, 0.4));
   }
 
   &__button--cancel {
-    border: 1px solid $color_icons_placeholder;
+    border: 1px solid v.$color_icons_placeholder;
 
-    @include hover(border-color, $color_primary);
+    @include m.hover(border-color, v.$color_primary);
   }
 }

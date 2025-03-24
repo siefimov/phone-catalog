@@ -1,4 +1,4 @@
-@import '../../styles/utils/vars';
+@use '../../styles/utils/vars' as v;
 
 .icon {
   position: relative;
@@ -8,7 +8,7 @@
   &:hover {
     .icon__close--grey {
       path {
-        fill: $color_primary;
+        fill: v.$color_primary;
       }
     }
   }
@@ -17,7 +17,7 @@
     position: absolute;
     top: -5px;
     right: -7px;
-    background-color: $color_accent_secondary;
+    background-color: v.$color_accent_secondary;
     color: white;
     border-radius: 50%;
     width: 14px;

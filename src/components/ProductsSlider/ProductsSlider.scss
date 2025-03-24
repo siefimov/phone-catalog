@@ -1,5 +1,5 @@
-@import '../../styles/utils/mixins';
-@import '../../styles/utils/vars';
+@use '../../styles/utils/mixins' as m;
+@use '../../styles/utils/vars' as v;
 
 .product-slider {
   margin: 0 auto;
@@ -12,11 +12,11 @@
     width: calc(100vw - 32px);
     margin-bottom: 24px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       width: calc(100vw - 48px);
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       width: 100%;
     }
   }
@@ -31,7 +31,7 @@
     width: 32px;
     height: 32px;
     background: none;
-    border: 1px solid $color_secondary;
+    border: 1px solid v.$color_secondary;
     cursor: pointer;
     color: #333;
 
@@ -44,14 +44,14 @@
     }
 
     &.disabled {
-      border-color: $color_elements;
+      border-color: v.$color_elements;
       cursor: not-allowed;;
 
-      @include hover('border-color', $color_elements);
+      @include m.hover('border-color', v.$color_elements);
     }
 
     &.disabled svg path {
-      fill: $color_elements;
+      fill: v.$color_elements;
     }
   }
 

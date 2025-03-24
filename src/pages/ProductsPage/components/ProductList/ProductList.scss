@@ -1,4 +1,4 @@
-@import '../../../../styles/utils/mixins';
+@use '../../../../styles/utils/mixins' as m;
 
 .product-list {
   display: grid;
@@ -6,15 +6,15 @@
   gap: 40px 16px;
   justify-content: start;
 
-  @include on-tablet {
+  @include m.on-tablet {
     grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
   }
 
-  @include on-tablet-landscape {
+  @include m.on-tablet-landscape {
     grid-template-columns: repeat(auto-fill, minmax(229px, 1fr));
   }
 
-  @include on-desktop {
+  @include m.on-desktop {
     grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
   }
 }

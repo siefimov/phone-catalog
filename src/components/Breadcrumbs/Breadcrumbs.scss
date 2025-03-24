@@ -1,5 +1,5 @@
-@import '../../styles/utils/vars';
-@import '../../styles/utils/mixins';
+@use '../../styles/utils/vars' as v;
+@use '../../styles/utils/mixins' as m;
 
 .breadcrumbs {
   display: flex;
@@ -16,10 +16,10 @@
 
   &__link {
     font-weight: 600;
-    color: $color_primary;
+    color: v.$color_primary;
     text-decoration: none;
 
-    @include hover(color, $color_accent_secondary);
+    @include m.hover(color, v.$color_accent_secondary);
 
     svg path {
       transition: fill 0.3s;
@@ -27,14 +27,14 @@
 
     &:hover {
       svg path {
-        fill: $color_accent_secondary;
+        fill: v.$color_accent_secondary;
       }
     }
   }
 
   &__text {
     font-weight: 500;
-    color: $color_secondary;
+    color: v.$color_secondary;
 
     white-space: nowrap;
     overflow: hidden;

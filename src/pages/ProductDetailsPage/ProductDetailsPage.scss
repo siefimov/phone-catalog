@@ -1,10 +1,10 @@
-@import '../../styles/utils/mixins';
-@import '../../styles/utils/vars';
+@use '../../styles/utils/mixins' as m;
+@use '../../styles/utils/vars' as v;
 
 .product-details {
   margin-inline: auto;
 
-  @include page-grid;
+  @include m.page-grid;
 
   &__breadcrumbs,
   &__back-button,
@@ -18,7 +18,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-bottom: 40px;
     }
   }
@@ -30,7 +30,7 @@
   &__title {
     margin-bottom: 32px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-bottom: 40px;
     }
   }
@@ -42,11 +42,11 @@
 
     margin-bottom: 56px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       grid-template-columns: repeat(12, 1fr);
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       grid-template-columns: repeat(24, 1fr);
     }
   }
@@ -58,13 +58,13 @@
     grid-column: 1 / -1;
     justify-items: center;
 
-    @include on-tablet {
+    @include m.on-tablet {
       grid-template-columns: repeat(6, 1fr);
       column-gap: 16px;
       grid-column: 1 / 8;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       grid-template-columns: repeat(24, 1fr);
 
       grid-column: 1 / 13;
@@ -78,7 +78,7 @@
 
       margin-bottom: 40px;
 
-      @include on-tablet {
+      @include m.on-tablet {
         grid-column: 1 / 2;
         grid-row: 1;
         margin-bottom: 0;
@@ -92,7 +92,7 @@
         overflow-x: auto;
         scroll-snap-type: x mandatory;
 
-        @include on-tablet {
+        @include m.on-tablet {
           flex-direction: column;
         }
       }
@@ -103,13 +103,13 @@
         height: 49px;
         scroll-snap-align: start;
         scroll-snap-stop: always;
-        border: 1px solid $color_elements;
+        border: 1px solid v.$color_elements;
         border-radius: 4px;
 
-        @include hover(border-color, $color_icons_placeholder);
+        @include m.hover(border-color, v.$color_icons_placeholder);
 
         &.selected {
-          border: 1px solid $color-primary;
+          border: 1px solid v.$color-primary;
         }
 
         img {
@@ -130,7 +130,7 @@
 
       margin-bottom: 16px;
 
-      @include on-tablet {
+      @include m.on-tablet {
         grid-column: 2 / 8;
 
         width: 287px;
@@ -139,7 +139,7 @@
         margin-bottom: 0;
       }
 
-      @include on-desktop {
+      @include m.on-desktop {
         width: 464px;
         height: 464px;
       }
@@ -155,11 +155,11 @@
   &__info {
     grid-column: 1 / -1;
 
-    @include on-tablet {
+    @include m.on-tablet {
       grid-column: 8 / -1;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       grid-column: 14 / 21;
     }
   }
@@ -167,7 +167,7 @@
   &__colors {
     padding-bottom: 24px;
     margin-bottom: 24px;
-    border-bottom: 1px solid $color_elements;
+    border-bottom: 1px solid v.$color_elements;
 
     &-wrapper {
       display: flex;
@@ -184,7 +184,7 @@
     &-button {
       width: 32px;
       height: 32px;
-      border: 1px solid $color_elements;
+      border: 1px solid v.$color_elements;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -193,10 +193,10 @@
       padding: 0;
       background: none;
 
-      @include hover(border-color, $color_icons_placeholder);
+      @include m.hover(border-color, v.$color_icons_placeholder);
 
       &.selected {
-        border-color: $color_primary;
+        border-color: v.$color_primary;
       }
     }
 
@@ -209,7 +209,7 @@
     }
 
     &-title {
-      color: $color_secondary;
+      color: v.$color_secondary;
     }
   }
 
@@ -217,16 +217,16 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 15.34px;
-    color: $color_icons_placeholder;
+    color: v.$color_icons_placeholder;
   }
 
   &__capacity {
     margin-bottom: 32px;
     padding-bottom: 24px;
-    border-bottom: 1px solid $color_elements;
+    border-bottom: 1px solid v.$color_elements;
 
     &-title {
-      color: $color_secondary;
+      color: v.$color_secondary;
       margin-bottom: 8px;
     }
 
@@ -238,13 +238,13 @@
     &-button {
       width: 63px;
       height: 32px;
-      border: 1px solid $color_icons_placeholder;
+      border: 1px solid v.$color_icons_placeholder;
       border-radius: 4px;
 
-      @include hover(border-color, $color_primary);
+      @include m.hover(border-color, v.$color_primary);
 
       &.selected {
-        background-color: $color_primary;
+        background-color: v.$color_primary;
         color: #fff;
       }
     }
@@ -273,7 +273,7 @@
       line-height: 28.12px;
       text-align: left;
       text-decoration-line: line-through;
-      color: $color_secondary;
+      color: v.$color_secondary;
     }
   }
 
@@ -306,7 +306,7 @@
     }
 
     &-property {
-      color: $color_secondary;
+      color: v.$color_secondary;
     }
 
     &-value {
@@ -314,12 +314,12 @@
       font-weight: 700;
       line-height: 15.34px;
       text-align: right;
-      color: $color_primary;
+      color: v.$color_primary;
     }
   }
 
   &__additional {
-    @include on-desktop {
+    @include m.on-desktop {
       display: grid;
       grid-template-columns: repeat(24, 1fr);
       column-gap: 16px;
@@ -329,7 +329,7 @@
   &__about {
     margin-bottom: 56px;
 
-    @include on-desktop {
+    @include m.on-desktop {
       grid-column: 1 / 13;
       margin-bottom: 0;
     }
@@ -341,7 +341,7 @@
     &-title {
       padding-bottom: 16px;
       margin-bottom: 32px;
-      border-bottom: 1px solid $color_elements;
+      border-bottom: 1px solid v.$color_elements;
     }
 
     &-item-title {
@@ -349,14 +349,14 @@
     }
 
     &-item-content {
-      color: $color_secondary;
+      color: v.$color_secondary;
     }
   }
 
   &__tech-specs {
     margin-bottom: 56px;
 
-    @include on-desktop {
+    @include m.on-desktop {
       grid-column: 14 / -1;
       margin-bottom: 0;
     }
@@ -364,7 +364,7 @@
     &-title {
       padding-bottom: 16px;
       margin-bottom: 30px;
-      border-bottom: 1px solid $color_elements;
+      border-bottom: 1px solid v.$color_elements;
     }
 
     &-list {
@@ -384,7 +384,7 @@
       font-size: 14px;
       font-weight: 500;
       line-height: 21px;
-      color: $color_secondary;
+      color: v.$color_secondary;
       margin-right: 40px;
     }
 
@@ -403,15 +403,15 @@
     justify-content: center;
     margin-bottom: 56px;
 
-    @include on-tablet {
+    @include m.on-tablet {
       margin-right: -24px;
       margin-bottom: 64px;
     }
 
-    @include on-desktop {
+    @include m.on-desktop {
       margin-right: 0;
       margin-bottom: 81px;
-      margin-inline: auto;  
+      margin-inline: auto;
     }
   }
 }

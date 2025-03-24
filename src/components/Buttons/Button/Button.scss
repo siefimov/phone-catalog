@@ -1,5 +1,5 @@
-@import '../../../styles/utils/mixins';
-@import '../../../styles/utils/vars';
+@use '../../../styles/utils/mixins' as m;
+@use '../../../styles/utils/vars' as v;
 
 .button {
   display: flex;
@@ -20,7 +20,7 @@
     border-radius: 8px;
 
     &:hover:not(.button--disabled) {
-      @include hover(box-shadow, 0 3px 13px 0 rgba(23, 32, 49, 0.4));
+      @include m.hover(box-shadow, 0 3px 13px 0 rgba(23, 32, 49, 0.4));
     }
   }
 
@@ -28,7 +28,7 @@
     border-radius: 50%;
 
     &:hover:not(.disabled) {
-      @include hover(border-color, $color_primary);
+      @include m.hover(border-color, v.$color_primary);
     }
   }
 }
