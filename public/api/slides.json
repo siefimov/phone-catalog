@@ -25,7 +25,7 @@
     "id": 3,
     "name": "iPhone 13 Pro",
     "message": "Be first to buy!",
-    "image": "img/iPhone-13-pro-max.png",
+    "image": "img/iPhone-13-pro-max.webp",
     "background": "rgb(234 245 255)",
     "backgroundCTA": "#ecf6ff",
     "colorHeading": "linear-gradient(133deg, #48ade7 0%, #a9c0d4 47.55%, #1b87ec 100%)",
