@@ -1,4 +1,4 @@
-@import '../utils/vars';
+@use '../utils/vars' as v;
 
 @mixin hover($_property, $_toValue) {
   & {
@@ -10,19 +10,19 @@
 }
 
 @mixin on-tablet {
-  @media (min-width: $tablet-width) {
+  @media (min-width: v.$tablet-width) {
     @content;
   }
 }
 
 @mixin on-tablet-landscape {
-  @media (min-width: $tablet-landscape-width) {
+  @media (min-width: v.$tablet-landscape-width) {
     @content;
   }
 }
 
 @mixin on-desktop {
-  @media (min-width: $desktop-width) {
+  @media (min-width: v.$desktop-width) {
     @content;
   }
 }
@@ -58,11 +58,16 @@
     --column: 24;
 
     grid-template-columns: repeat(var(--column), 32px);
-    max-width: $desktop-width;
+    max-width: v.$desktop-width;
   }
 }
 
-@mixin typography($font-weight, $font-size, $line-height, $letter-spacing) {
+@mixin typography(
+  $font-weight,
+  $font-size,
+  $line-height,
+  $letter-spacing
+) {
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
