@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: Mont;
   src: url('/fonts/Mont-Bold.otf') format('opentype');
   font-weight: 700;
@@ -6,6 +7,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: Mont;
   src: url('/fonts/Mont-SemiBold.otf') format('opentype');
   font-weight: 600;
@@ -13,6 +15,7 @@
 }
 
 @font-face {
+  font-display: swap;
   font-family: Mont;
   src: url('/fonts/Mont-Regular.otf') format('opentype');
   font-weight: 400;

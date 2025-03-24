@@ -1,7 +1,7 @@
 import { ApiRoutes, Categories } from '../enums';
 import { Product, ProductDetails, Slide } from '../types';
 
-const BASE_URL = 'https://siefimov.github.io/react_phone-catalog';
+const BASE_URL = 'https://siefimov.github.io/phone-catalog';
 
 export const getProducts = async (): Promise<Product[]> => {
   const response = await fetch(BASE_URL + ApiRoutes.PRODUCTS);

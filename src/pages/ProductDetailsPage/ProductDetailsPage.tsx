@@ -150,7 +150,7 @@ export const ProductDetailsPage: React.FC = () => {
           <div className="product-not-found__image-wrapper">
             <img
               className="product-not-found__image"
-              src="img/product-not-found.png"
+              src="img/product-not-found.webp"
               alt="Product not found"
             />
           </div>
@@ -165,7 +165,7 @@ export const ProductDetailsPage: React.FC = () => {
     return (
       <div className="product-not-found">
         <p>Product not found</p>
-        <img src="img/product-not-found.png" alt="Product not found" />
+        <img src="img/product-not-found.webp" alt="Product not found" />
       </div>
     );
   }
